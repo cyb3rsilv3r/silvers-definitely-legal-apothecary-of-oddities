@@ -40,12 +40,13 @@ public class HomeScreen {
 
                 case "D":
                     LedgerManager.addDeposit(scanner);
-                    System.out.println("Add Deposit selected");
+                 //   System.out.println("Add Deposit selected");
                     //insert deposit screen art here
                     break;
 
                 case "P":
-                    System.out.println("Make Payment selected");
+                    LedgerManager.makePayment(scanner);
+//                    System.out.println("Make Payment selected");
 
                     break;
 

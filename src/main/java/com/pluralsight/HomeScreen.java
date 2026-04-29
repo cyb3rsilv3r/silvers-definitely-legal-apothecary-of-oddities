@@ -22,10 +22,19 @@ public class HomeScreen {
 //need a loop here
         while (running) {
 
+            System.out.println("""
+  °❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･
+
+      ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺    𝕾𝖎𝖑𝖛𝖊𝖗'𝖘    ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺
+            ˖𓍢❀.ೃ  (🇩‌🇪‌🇫‌🇮‌🇳‌🇮‌🇹‌🇪‌🇱‌🇾‌ 🇱‌🇪‌🇬‌🇦‌🇱‌) ˖𓍢❀.ೃ࿔
+   ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺  𝔸𝕡𝕠𝕥𝕙𝕖𝕔𝕒𝕣𝕪 𝕠𝕗 𝕆𝕕𝕕𝕚𝕥𝕚𝕖𝕤  ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺
+
+   °❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･
+""");
 // The home screen should give the user the following options.
 
 //▪ D) Add Deposit
-            System.out.println("{ D } Add Deposit");
+            System.out.println("⋆˙⟡ —{ D } Add Coins to Coffer⋆˙⟡ —");
 
 //▪ P) Make Payment (Debit)
             System.out.println("{ P } Make Payment");
@@ -34,7 +43,8 @@ public class HomeScreen {
             System.out.println("{ L } Ledger");
 
 //▪ X) Exit
-            System.out.println("{ X } Exit ");
+            System.out.println("{ X } Exit");
+
 
 // get user input
             String choice = scanner.nextLine();

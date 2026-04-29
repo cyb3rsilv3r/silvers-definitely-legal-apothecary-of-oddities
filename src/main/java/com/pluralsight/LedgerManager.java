@@ -2,8 +2,6 @@ package com.pluralsight;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.Scanner;
 
 public class LedgerManager {
@@ -12,13 +10,13 @@ public class LedgerManager {
 
         // 1. collect information
 
-        //use local date and time for automatic input
         // date
-        String date = LocalDate.now().toString();
+        System.out.println("Enter Date");
+        String date = scanner.nextLine();
 
         // time
-        String time = LocalTime.now().toString();
-
+        System.out.println("Enter Time");
+        String time = scanner.nextLine();
         // ask description
         System.out.println("Enter description:");
         String description = scanner.nextLine();
@@ -70,7 +68,6 @@ public class LedgerManager {
 
         // 1. collect information again
 
-        //use local date and time here and make them into strings
         // date
         System.out.println("Enter date [yyyy-mm-dd] :");
         String date = scanner.nextLine();
@@ -141,6 +138,7 @@ public class LedgerManager {
                 t.getAmount() + "\n";
         // have writer put the line together and close after
         writer.write(line);
+   //remember to close writer
         writer.close();
 
     }//END OF WRITE TRANSACTION

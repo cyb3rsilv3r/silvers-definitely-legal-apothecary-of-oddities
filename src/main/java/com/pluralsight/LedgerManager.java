@@ -9,7 +9,7 @@ public class LedgerManager {
     public static void addDeposit(Scanner scanner) throws IOException {
         System.out.println("──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──");
         System.out.println("    /)/)           (\\(\\");
-        System.out.println("   ( . .)          (ᵔ ᵔ ) ✧ recording a new blessing to coffers ✧");
+        System.out.println("   ( . .)          (ᵔ ᵔ ) ✧ recording new blessing to coffers ✧");
         System.out.println("   o( づ ˚₊‧꒰ა $ ໒꒱ ‧₊˚⊂  )o");
         System.out.println("──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──\n");
         // 1. collect information
@@ -51,7 +51,7 @@ public class LedgerManager {
             Transaction t = new Transaction(date, time, description, vendor, amount);
 
             // print confirmation
-            System.out.println(amount+ " coins added to coffer!$ˎˊ˗");
+            System.out.println(amount+ " coins added to coffer!.ᐟˎˊ˗");
 
             // write transaction to csv (we add this next)
             writeTransaction(t);
@@ -59,37 +59,41 @@ public class LedgerManager {
 
         //  if no
         else {
-            System.out.println("Transaction cancelled.");
+            System.out.println("Transaction cancelled.\uD801\uDD0C՞. .՞\uD802\uDDAF");
         }
         // after confirmed OR canceled
-        System.out.println("\nPress Enter to return to home...");
+        System.out.println("\nPress Enter to return to main menu...");
         scanner.nextLine();
     } //end of addDeposit method
 
     // Create method for making payments
     public static void makePayment(Scanner scanner) throws IOException {
         //collect info on payments (same format as deposit but negative)
-
+        System.out.println("──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──");
+        System.out.println("      (\\(\\       (\\(\\");
+        System.out.println("      (ᵔ ᵔ )    (. . ) ✧ recording new withdrawal from coffers ✧");
+        System.out.println(" ꒰ა $ ໒꒱ ⊂ )o  ꒰  ꒱ ⊂ )o");
+        System.out.println("──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──");
         // 1. collect information again
 
         // date
-        System.out.println("Enter date [yyyy-mm-dd] :");
+        System.out.println("⋆⋅☆⋅⋆ ₊enter date of withdrawal [yyyy-mm-dd]⋆⋅☆⋅⋆ ");
         String date = scanner.nextLine();
 
         // time
-        System.out.println("Enter time [hh:mm:ss] :");
+        System.out.println("⋆⋅☆⋅⋆ enter time of withdrawal [hh:mm:ss] ⋆⋅☆⋅⋆ ");
         String time = scanner.nextLine();
 
         // ask description
-        System.out.println("Enter description:");
+        System.out.println("⋆⋅☆⋅⋆describe product attained⋆⋅☆⋅⋆ ");
         String description = scanner.nextLine();
 
         // ask vendor
-        System.out.println("Enter Vendor:");
+        System.out.println("⋆⋅☆⋅⋆ enter Merchants name⋆⋅☆⋅⋆ ");
         String vendor = scanner.nextLine();
 
         // ask amount
-        System.out.println("Enter amount:");
+        System.out.println("⋆⋅☆⋅⋆ enter amount of coins withdrawn⋆⋅☆⋅⋆ ");
         double amount = scanner.nextDouble();
         amount = amount * -1;
 
@@ -98,7 +102,7 @@ public class LedgerManager {
 
         // 2. show confirmation message
         System.out.println("\nNew Payment:");
-        System.out.println(date + "|" + time + "|" + description + "|" + vendor + "|" + amount);
+        System.out.println( date + "|" + time + "|" + description + "|" + vendor + "|" + amount);
 
         // ask if correct
         System.out.println("does this look correct? Y/N");
@@ -111,7 +115,7 @@ public class LedgerManager {
             Transaction t = new Transaction(date, time, description, vendor, amount);
 
             // print confirmation
-            System.out.println("Payment confirmed!");
+            System.out.println("Payment confirmed.ᐟ⊹₊ ⋆");
 
             // write transaction to csv
             writeTransaction(t);

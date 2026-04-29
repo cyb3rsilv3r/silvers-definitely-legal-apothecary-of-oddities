@@ -13,13 +13,16 @@ public class ledgerScreen {
 
     //create ledger menu
     public static void ledgerHome() throws IOException {
-        System.out.println(" ==={Ledger}===");
-        System.out.println("{A} All Entries");
-        System.out.println("{D} Deposits");
-        System.out.println("{P} Payments");
-        System.out.println("{R} Reports");
-        System.out.println("{H} Home");
-        System.out.println("Enter selection number:");
+        System.out.println(" ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔ ꧁⎝༺ Grimoire ༻⎠꧂⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ");
+        System.out.println(" ꒰ ᧔ෆ᧓ ꒱                                    ");
+        System.out.println(" ꒰ ᧔ෆ᧓ ꒱ {A} All Entries ★");
+        System.out.println(" ꒰ ᧔ෆ᧓ ꒱ {D} Deposits ★");
+        System.out.println(" ꒰ ᧔ෆ᧓ ꒱ {P} Payments ★");
+        System.out.println(" ꒰ ᧔ෆ᧓ ꒱ {R} Reports ★");
+        System.out.println(" ꒰ ᧔ෆ᧓ ꒱ {H} Home ★");
+        System.out.println(" ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔");
+        System.out.println(" ⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔Enter selection number:⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔");
+
 
         String choice = scanner.nextLine().toUpperCase();
         switch (choice){
@@ -85,7 +88,7 @@ public class ledgerScreen {
         // call loadTransactions so we can get all lines from the csv
         ArrayList<String> transactions = loadTransactions();
 
-        System.out.println("\n======== ALL ENTRIES ========");
+        System.out.println("✩₊˚.⋆☾⋆⁺₊✧ALL ENTRIES✩₊˚.⋆☾⋆⁺₊✧");
 
         // loop backwards so newest entries show first
         for (int i = transactions.size() - 1; i >= 0; i--) {
@@ -101,7 +104,7 @@ public class ledgerScreen {
         // call loadTransactions so we can get all lines from the csv
         ArrayList<String> transactions = loadTransactions();
 
-        System.out.println("\n======== DEPOSITS ========");
+        System.out.println("✩₊˚.⋆☾⋆⁺₊✧ DEPOSITS ✩₊˚.⋆☾⋆⁺₊✧");
 
         // loop backwards so newest deposits show first
         for (int i = transactions.size() - 1; i >= 0; i--) {
@@ -133,7 +136,7 @@ public class ledgerScreen {
         // call loadTransactions so we can get all lines from the csv
         ArrayList<String> transactions = loadTransactions();
 
-        System.out.println("\n======== PAYMENTS ========");
+        System.out.println("\n✩₊˚.⋆☾⋆⁺₊✧PAYMENTS ✩₊˚.⋆☾⋆⁺₊✧");
 
         // loop backwards so newest payments show first
         for (int i = transactions.size() - 1; i >= 0; i--) {
@@ -162,14 +165,14 @@ public class ledgerScreen {
     //    to run a custom search
     //display menu items
     public static void displayReports() {
-        System.out.println("==={Reports}===");
-        System.out.println("1) Month To Date");
-        System.out.println("2) Previous Month");
-        System.out.println("3) Year To Date");
-        System.out.println("4) Previous Year");
-        System.out.println("5) Search by Vendor");
-        System.out.println("0) Back");
-        System.out.println("Enter selection number");
+        System.out.println("✩₊˚.⋆☾⋆⁺₊✧{Reports}✩₊˚.⋆☾⋆⁺₊✧");
+        System.out.println("⋆⭒˚｡⋆1) Month To Date⋆⭒˚｡⋆");
+        System.out.println("⋆⭒˚｡⋆2) Previous Month⋆⭒˚｡⋆");
+        System.out.println("⋆⭒˚｡⋆3) Year To Date⋆⭒˚｡⋆");
+        System.out.println("⋆⭒˚｡⋆4) Previous Year⋆⭒˚｡⋆");
+        System.out.println("⋆⭒˚｡⋆5) Search by Vendor⋆⭒˚｡⋆");
+        System.out.println("⋆⭒˚｡⋆0) Back⋆⭒˚｡⋆");
+        System.out.println("✩₊˚.⋆☾⋆⁺₊✧Enter selection number✩₊˚.⋆☾⋆⁺₊✧");
 
         String choice = scanner.nextLine();
 
@@ -278,7 +281,7 @@ public class ledgerScreen {
     // ▪ 5) Search by Vendor - prompt the user for the vendor name and
 //    display all entries for that vendor
     public static void searchByVendor() {
-        System.out.println("Enter vendor name:");
+        System.out.println("✩₊˚.⋆enter Merchant name✩₊˚.⋆");
         String vendorSearch = scanner.nextLine();
         // add transactions list to pull info from
         ArrayList<String> transactions = loadTransactions();

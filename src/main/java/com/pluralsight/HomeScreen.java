@@ -24,9 +24,9 @@ public class HomeScreen {
 
             System.out.println("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
             System.out.println("                 welcome to ");
-            System.out.println("      ཐི⋆♱⋆ཋྀ       𝓢𝓲𝓵𝓿𝓮𝓻'𝓼     ཐི⋆♱⋆ཋྀ ˚");
-            System.out.println(" .       ˖𓍢❀.ೃ (definitely legal) ˖𓍢❀.ೃ࿔   ");
-            System.out.println("⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺  𝔸𝕡𝕠𝕥𝕙𝕖𝕔𝕒𝕣𝕪 𝕠𝕗 𝕆𝕕𝕕𝕚𝕥𝕚𝕖𝕤  ⁺‧₊˚ ཐི⋆♱⋆ཋྀ ˚₊‧⁺");
+            System.out.println("          ཐི⋆♱  𝓢𝓲𝓵𝓿𝓮𝓻'𝓼  ♱⋆ཋྀ ˚");
+            System.out.println(" .  ཐི⋆♱⋆ཋྀ    (definitely legal)  ི⋆♱⋆ཋྀ  ");
+            System.out.println("           𝔸𝕡𝕠𝕥𝕙𝕖𝕔𝕒𝕣𝕪 𝕠𝕗 𝕆𝕕𝕕𝕚𝕥𝕚𝕖𝕤   ");
 
             System.out.println("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･");
             System.out.println("── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──");
@@ -36,9 +36,8 @@ public class HomeScreen {
 //D) Add Deposit - Add coins to coffer
 //P) Make Payment (Debit)- Empty coffer
             //L) Ledger- Grimoire
-            System.out.println("꒰ა ☆ ໒꒱ D } Add Coins to Coffer ☾");
-
-            System.out.println("꒰ა ☆ ໒꒱{ P } Empty Coffers ₊˚.⋆✩₊˚.⋆   ");
+            System.out.println("꒰ა ☆ ໒꒱{ D } Add Coins to Coffer ☾ ˚.⋆   ✩˚.⋆   ✩");
+            System.out.println("꒰ა ☆ ໒꒱{ P } Empty Coffers ₊˚.⋆✩₊˚.⋆⋆ ˚｡⋆  ˚.⋆   ✩ ");
             System.out.println("‧꒰ა ☆ ໒꒱{ L } Open Coin Grimoire ⋆˚.⋆   ✩  ╱|、 ");
             System.out.println("꒰ა ☆ ໒꒱{ X } Escape Apothecary  ₊˚.⋆  ✩  (˚ˎ 。7  ");
             System.out.println("  ─────────────۶ৎ─────────────            |、˜〵 ");
@@ -69,7 +68,15 @@ public class HomeScreen {
 
                 case "X":
                  LedgerManager.confirmExit(scanner);
-                    System.out.println("Thank you for magically transacting!");
+                    System.out.println("  ◌               ◌    ˚.⋆✩₊˚.⋆    ◌ ˚.⋆✩₊˚.⋆    ");
+                    System.out.println("           ‧₊ *:･ﾟ彡       ◌       ☽      ◌");
+                    System.out.println("        ◌            ✩彡 ･ﾟ *:           ");
+                    System.out.println("                      ♡");
+                    System.out.println("                 (\\_(\\       /)_/)");
+                    System.out.println("                (     )     (     )");
+                    System.out.println("                ૮/ʚɞ  |ა   ૮|  ʚɞ\\ა");
+                    System.out.println("               ( ◌    |     |    ◌ )");
+                    System.out.println("✧˚.⋆✩₊˚. the grimoire closes… until next time ˚.⋆✩₊˚.✧");
                     running = false; // stops the loop
                     break;
 

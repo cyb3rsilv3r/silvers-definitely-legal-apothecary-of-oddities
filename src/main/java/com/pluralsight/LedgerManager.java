@@ -6,6 +6,25 @@ import java.util.Scanner;
 
 public class LedgerManager {
 
+    public static void writeTransaction(Transaction t) throws IOException {
+        //add file writer
+
+        //create method inside try/catch to write to csv file
+        FileWriter writer = new FileWriter("transactions.csv", true);
+
+        //add variable to store line
+        String line = t.getDate() + "|" +
+                t.getTime() + "|" +
+                t.getDescription() + "|" +
+                t.getVendor() + "|" +
+                t.getAmount() + "\n";
+        // have writer put the line together and close after
+        writer.write(line);
+
+        writer.close();
+
+    }//END OF WRITE TRANSACTION
+
     public static void addDeposit(Scanner scanner) throws IOException {
         System.out.println("──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──");
         System.out.println("    /)/)           (\\(\\");
@@ -59,14 +78,14 @@ public class LedgerManager {
 
         //  if no
         else {
-            System.out.println("Transaction cancelled.\uD801\uDD0C՞. .՞\uD802\uDDAF");
+            System.out.println("Transaction cancelled.");
         }
         // after confirmed OR canceled
         System.out.println("\nPress Enter to return to main menu...");
         scanner.nextLine();
     } //end of addDeposit method
-
     // Create method for making payments
+
     public static void makePayment(Scanner scanner) throws IOException {
         //collect info on payments (same format as deposit but negative)
         System.out.println("──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──── ⋆⋅☆⋅⋆ ──");
@@ -95,7 +114,7 @@ public class LedgerManager {
         // ask amount
         System.out.println("⋆⋅☆⋅⋆ enter amount of coins withdrawn⋆⋅☆⋅⋆ ");
         double amount = scanner.nextDouble();
-        amount = amount * -1;
+        amount = -Math.abs(amount);
 
         //remember to add buffer after double
         scanner.nextLine();
@@ -116,40 +135,20 @@ public class LedgerManager {
 
             // print confirmation
             System.out.println("Payment confirmed.ᐟ⊹₊ ⋆");
-
-            // write transaction to csv
+            System.out.println("about to write...");
             writeTransaction(t);
-
-        }
+            System.out.println("done writing");
+        }//end of if
 
         // 4. if no
         else {
-            System.out.println("Payment cancelled. Returning to menu.");
+            System.out.println("Payment cancelled. Returning to menu⋆⋅☆⋅⋆.");
         }
         // after confirmed OR canceled
-        System.out.println("\nPress Enter to return to home...");
+        System.out.println("\nPress Enter to return to main menu...");
         scanner.nextLine();
     }
 
-
-    public static void writeTransaction(Transaction t) throws IOException {
-        //add file writer
-
-        //create method inside try/catch to write to csv file
-        FileWriter writer = new FileWriter("transactions.csv", true);
-
-        //add variable to store line
-        String line = t.getDate() + "|" +
-                t.getTime() + "|" +
-                t.getDescription() + "|" +
-                t.getVendor() + "|" +
-                t.getAmount() + "\n";
-        // have writer put the line together and close after
-        writer.write(line);
-   //remember to close writer
-        writer.close();
-
-    }//END OF WRITE TRANSACTION
 
     // Make method for exit
     public static void confirmExit(Scanner scanner) {

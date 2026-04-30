@@ -179,21 +179,32 @@ public class ledgerScreen {
         switch (choice) {
             case "1":
                 monthToDate();
+                System.out.println("press enter to return to main menu");
+                scanner.nextLine();
                 break;
             case "2":
                 previousMonth();
+                System.out.println("press enter to return to main menu");
+                scanner.nextLine();
                 break;
             case "3":
                 yearToDate();
+                System.out.println("press enter to return to main menu");
+                scanner.nextLine();
                 break;
             case "4":
                 previousYear();
+                System.out.println("press enter to return to main menu");
+                scanner.nextLine();
                 break;
             case "5":
                 searchByVendor();
+                System.out.println("press enter to return to main menu");
+                scanner.nextLine();
                 break;
             case "0":
-                displayReports();
+                displayReports(); System.out.println("where would you like to go next?");
+                scanner.nextLine();
         }//END OF SWITCH
     }//END OF DISPLAY REPORTS
 
@@ -219,6 +230,7 @@ public class ledgerScreen {
             }
             //end of if
         }//end of for
+
     }//end of month to date
 
     //▪ 2) Previous Month(month-1)

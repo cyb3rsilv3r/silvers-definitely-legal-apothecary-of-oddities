@@ -86,7 +86,7 @@ public class HomeScreen {
 
         }
 //remember to close scanner at the end
-        scanner.close();
+        //scanner.close();
 
     }//end of main
 
